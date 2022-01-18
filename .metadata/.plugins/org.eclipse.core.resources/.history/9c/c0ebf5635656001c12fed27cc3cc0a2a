@@ -1,0 +1,11 @@
+package hello;
+
+public class Main {
+
+	public static void main(String[] args) {
+	Person p = new Person("ȫ�浿, 20", 0);
+	
+
+
+	}
+}

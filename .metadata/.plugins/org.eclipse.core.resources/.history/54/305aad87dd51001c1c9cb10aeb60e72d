@@ -1,0 +1,6 @@
+package homework.kh;
+
+public enum LoginChk {
+
+	ADMIN,MEMBER,FAIL;
+}

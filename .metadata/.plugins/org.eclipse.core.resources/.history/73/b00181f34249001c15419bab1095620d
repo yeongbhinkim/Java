@@ -1,0 +1,11 @@
+package test;
+
+public class test2 extends test {
+
+	@Override
+	public void service() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

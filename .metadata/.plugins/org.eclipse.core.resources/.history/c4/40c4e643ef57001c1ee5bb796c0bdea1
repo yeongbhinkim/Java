@@ -1,0 +1,155 @@
+package com.words;
+
+import java.util.Scanner;
+
+import com.words.LoginChk;
+import com.words.Members;
+import com.words.dic.Dictionary;
+
+public class Menu {
+//	private Members members= new Members();
+//	private Dictionary dictionary = new Dictionary();
+	
+	private Members members;				//회원
+	private Dictionary dictionary;	//사전
+	private Scanner scanner = new Scanner(System.in);
+
+	public Menu() {
+		super();
+		this.members = new Members();
+		this.dictionary = new Dictionary();
+	}
+
+	// 초기메뉴
+	public void initMenu() {
+		String choiceNum = null;
+		String id = null;
+		String pw = null;
+		boolean stop = false;
+
+		while (!stop) {
+			System.out.println("1.로그인 2.가입 0.종료");
+			System.out.print("선택 > ");
+			choiceNum = scanner.nextLine();
+			switch (choiceNum) {
+			case "1": // 로그인
+				System.out.print("ID : ");
+				id = scanner.nextLine();
+				System.out.print("Pw : ");
+				pw = scanner.nextLine();
+
+				LoginChk loginChk = members.isMember(id, pw);
+
+				switch (loginChk) {
+				case ADMIN: // 관리자
+					adminMenu();
+					break;
+				case MEMBER:// 회원
+					customerMenu();
+					break;
+				case FAIL: // 인증실패
+					System.out.println("아이디 또는 비밀번호가 잘못되었습니다.!");
+					continue;
+				default:
+					break;
+				}
+
+				break;
+			case "2": // 가입
+				System.out.print("ID : ");
+				id = scanner.nextLine();
+				System.out.print("Pw : ");
+				pw = scanner.nextLine();
+
+				members.joinMember(id, pw);
+				System.out.println("회원가입 되었습니다.");
+
+				break;
+			case "0": // 종료
+				stop = true;
+				System.out.println("프로그램 종료!");
+				System.exit(0);
+				break;
+
+			default:
+				break;
+			} // end of switch
+		} // end of while
+	} // end of initMenu()
+
+	// 관리자용메뉴
+	public void adminMenu() {
+		boolean stop = false;
+		String choiceNum = null;
+		String word = null;
+		String meaning = null;
+		
+		while (!stop) {
+			System.out.println("1.등록 2.수정 3.검색 4.삭제 5.단어목록 6.전체목록 7.전체삭제 0.로그아웃 ");
+			System.out.print("선택 >");
+			choiceNum = scanner.nextLine();
+
+			switch (choiceNum) {
+			case "1": //등록
+				System.out.print("단어 > ");
+				word = scanner.nextLine();
+				System.out.print("의미 > ");
+				meaning = scanner.nextLine();
+				dictionary.put(word, meaning);
+				break;
+			case "2"://수정
+
+				break;
+			case "3"://검색
+
+				break;
+			case "4"://삭제
+
+				break;
+			case "5"://단어목록
+				System.out.println("단어목록 > ");
+				dictionary.listWords();
+				break;
+			case "6"://전체목록
+
+				break;
+			case "7"://전체삭제
+
+				break;
+			case "0":// 로그아웃
+				stop = true;
+				break;
+
+			default:
+				break;
+			}// end of switch
+		} // end of while()
+	}// end of adminMenu
+
+	// 사용자메뉴
+	public void customerMenu() {
+		boolean stop = false;
+		String choiceNum = null;
+
+		while (!stop) {
+			System.out.println("1.검색 2.단어목록 0.로그아웃");
+			System.out.println("선택 > ");
+			choiceNum = scanner.nextLine();
+
+			switch (choiceNum) {
+			case "1":
+				
+				break;
+			case "2":
+
+				break;
+			case "0":
+				stop = true;
+				break;
+
+			default:
+				break;
+			}// end of switch
+		} // end of while()
+	}// end of adminMenu()
+}// end of main()

@@ -1,0 +1,12 @@
+package com.kh.button;
+
+public class Button {
+
+	void click() {
+		
+	}
+	
+	interface OnClickListener() {
+		void onClick();
+	}
+}

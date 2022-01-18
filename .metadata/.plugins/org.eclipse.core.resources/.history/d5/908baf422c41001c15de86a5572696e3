@@ -1,0 +1,20 @@
+package first;
+
+public class Dice3 {
+
+	public static void main(String[] args) {
+		//System.out.println((int)(Math.random()*6)+1); 
+		//random 0.0~1
+		int random = (int)(Math.random()*6)+1;
+		System.out.println("´øÁø ÁÖ»çÀ§¼ö = " + random);
+		
+		//random % 2 == 1
+		
+//		System.out.println((11 % 2) == 0);
+		if(random % 3 ==0) {
+			System.out.println("Â¦¼ö");
+		}else {
+			System.out.println("È¦¼ö");
+		}
+	}
+}

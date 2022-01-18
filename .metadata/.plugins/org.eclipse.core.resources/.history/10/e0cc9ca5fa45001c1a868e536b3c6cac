@@ -1,0 +1,51 @@
+package com.kh;
+
+import java.util.Scanner;
+
+public class tast1 {
+
+	public static void main(String[] args) {
+
+		Scanner scanner = new Scanner(System.in);
+		boolean run = true;// 프로그램 정지
+		String[][] seats = new String[6][10];
+		int num = 0;
+		for (int i = 0; i < seats.length; i++) {
+			for (int j = 0; j < seats[i].length; j++) {
+				seats[i][j] = String.valueOf(num + 1);
+				num++;
+				if (i == 0) {
+					System.out.print(seats[i][j] + "  ");
+				} else {
+					System.out.print(seats[i][j] + " ");
+				}
+			}
+			System.out.println();
+		}
+
+		while (run) {
+			System.out.print("좌석을 선택하세요");
+			System.out.print("선택>>");
+			int selectNum = Integer.parseInt(scanner.nextLine());
+			int row = (selectNum - 1) / 10;
+			int col = (selectNum - 1) % 10;
+			if (selectNum >= 1 && selectNum <= 60) {
+				if (seats[row][col] == "X") {
+					System.out.println("이미 예매되었습니다.");
+					System.out.println("다른 좌석을 선택해주세요.");
+				} else {
+					seats[row][col] = "X";
+					System.out.println("예약 되었습니다.");
+					continue;
+				}
+			} else if (selectNum == 0) {
+				run = false;
+				System.out.println("프로그램을 종료합니다");
+				break;
+			} else {
+				System.out.println("선택할 수 없는 좌석입니다.");
+				continue;
+			}
+		}
+	}
+}

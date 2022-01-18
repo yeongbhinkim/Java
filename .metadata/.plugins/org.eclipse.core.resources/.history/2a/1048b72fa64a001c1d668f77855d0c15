@@ -1,0 +1,10 @@
+package test;
+
+public class test1 extends test {
+
+	@Override
+	public void service() {
+System.out.println("ÆÄÀÏ");
+	}
+
+}

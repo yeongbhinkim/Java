@@ -1,0 +1,20 @@
+package first;
+
+public class Practice {
+	
+	public static void main(String[] args) {
+		char grade ='B';
+		
+		if(grade == 'B' || grade == 'b') {
+			System.out.println("일반회원");
+			if(grade == 'B') {
+				System.out.println("B");
+			} else {
+				System.out.println("b");
+			}
+		}
+	}
+}
+		
+
+	

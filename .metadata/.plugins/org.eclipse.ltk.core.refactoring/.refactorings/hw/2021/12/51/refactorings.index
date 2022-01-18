@@ -1,0 +1,31 @@
+1639530876922	Extract interface 'accountIFIF'
+1639530893408	Delete element
+1639531127975	Extract superclass 'dfsgddfsg'
+1639533447218	Copy package
+1639533452908	Delete element
+1639533455751	Copy package
+1639533461112	Delete element
+1639533466844	Copy package
+1639533512608	Delete element
+1639533524396	Rename type 'dfsgddfsg'
+1639534180393	Extract interface 'AccountIf2'
+1639534196461	Delete element
+1639534208365	Rename type 'AccountIf2'
+1639534464282	Rename type 'AccountIf'
+1639535061809	Delete element
+1639536475079	Copy package
+1639538795645	Delete elements
+1639538819383	Rename type 'Account'
+1639538823076	Rename type 'dfsgddfsg'
+1639538829459	Delete element
+1639544207040	Delete element
+1639544218234	Copy source folder
+1639544248317	Delete element
+1639544257635	Copy package
+1639544270578	Rename package 'com.work.copy'
+1639545328639	Extract interface 'ㄴㅁㄹ'
+1639545363537	Delete element
+1639548192932	Copy package
+1639548199729	Delete element
+1639548246804	Extract interface 'AccountIf'
+1639564180234	Extract method 'AnoChk'

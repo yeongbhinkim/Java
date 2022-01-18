@@ -1,0 +1,50 @@
+package homework.kh;
+
+import java.util.Map;
+import java.util.Set;
+
+public class admin implements DicAdminIf, DicCommonIf {
+
+//	@Override
+//	public String find(String word) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Set<String> listWords() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public void put(String word, String Meaning) {
+//		// TODO Auto-generated method stub
+//
+//	}
+//
+//	@Override
+//	public void update(String word, String maening) {
+//		// TODO Auto-generated method stub
+//
+//	}
+//
+//	@Override
+//	public String remove(String word) {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public Map<String, String> listAll() {
+//		// TODO Auto-generated method stub
+//		return null;
+//	}
+//
+//	@Override
+//	public void removeAll() {
+//		// TODO Auto-generated method stub
+//
+//	}
+
+}

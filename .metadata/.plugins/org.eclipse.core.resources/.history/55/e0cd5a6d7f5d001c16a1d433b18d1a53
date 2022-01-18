@@ -1,0 +1,9 @@
+package com.work;
+
+public interface AccountIf {
+
+	int deposit(int anount) throws Exception;//deposit 입금
+
+	int withdraw(int anount) throws Exception;//withdraw 출금
+
+}

@@ -1,0 +1,19 @@
+package com.kh.button;
+
+public class Button {
+	
+	OnClickListener listener;
+	
+	void setOnClickListener(OnClickListener listener) {
+		this.listener = listener;
+	}
+
+	void click() {
+		listener.onClick();
+	}
+	
+	//인스턴스 멤버 인터페이스 
+	interface OnClickListener{
+		void onClick();
+	}
+}

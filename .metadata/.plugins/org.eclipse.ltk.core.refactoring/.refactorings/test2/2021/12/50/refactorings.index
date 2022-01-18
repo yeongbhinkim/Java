@@ -1,0 +1,10 @@
+1639102390686	Extract method 'createAccountNumber'
+1639102646141	Extract method 'createAccount'
+1639103358921	Extract method 'closedAccount'
+1639103926726	Extract method 'deposit'
+1639103940704	Extract method 'withraw'
+1639104096620	Extract method 'showAccount'
+1639104105398	Extract method 'showAccountAll'
+1639106663784	Extract interface 'AccountIf'
+1639107037688	Copy package
+1639107385390	Delete element

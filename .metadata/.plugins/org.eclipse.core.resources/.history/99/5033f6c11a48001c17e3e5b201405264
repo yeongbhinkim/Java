@@ -1,0 +1,21 @@
+package solution6;
+/*
+ * 싱글턴 패턴
+ * 1. 외부에서 생성자를 호출하지 못하도록 앞에 private를 붙인다.
+ * 
+ */
+public class ShopService {
+	//private : 외부에서 값을 수정하지 못하도록함
+	//static  : 프로그램이 시작되기전에 초기화하기 위함
+	
+	//다른곳에서 생성되지 못하게 객체내부에서 생성
+	private static ShopService singleton = new ShopService();
+	
+	//private : 외부에서 생성자를 호출하지 못하도록 앞에 private를 붙인다.
+	private ShopService() {
+	}
+
+	static ShopService getInstaqnce() {
+		return singleton;
+	}
+}

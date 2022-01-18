@@ -1,0 +1,42 @@
+package main;
+
+import java.util.Scanner;
+
+public class m {
+	public static void main(String[] args) {
+//같은숫자가 오면 false char에 같은 숫자가 있으면 
+		// 카운드가 오르거나 초기화
+		// 입력을 hashset으로 중복을 제거 해서 넣어보자
+
+//		HashSet<String> hashSet = new HashSet<>();
+
+		Scanner in = new Scanner(System.in);
+		String str = in.nextLine();
+//		for (int j = 0; j < str.length(); j++) {
+//			hashSet.add(str.charAt(j));
+//		}
+		in.close();
+		int count = 0;
+		count += count;
+		loop:
+		for (int i = 0; i < 10; i++) {
+			int c =0;
+			
+			for (int j = 0; j < str.length(); j++) {
+								 if ((str.charAt(j) - '0') == i) {
+									 //따로 카운트
+					c++;
+					count++;
+				}
+			}
+			if(c>1) {
+				System.out.println(c);
+//				System.out.println(false);
+				break loop;
+		}
+		if (count == 10) {
+			System.out.println(true);
+		}
+		}
+	}
+}

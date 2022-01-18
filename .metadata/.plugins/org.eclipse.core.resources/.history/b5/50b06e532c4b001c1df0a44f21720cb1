@@ -1,0 +1,6 @@
+package com.kh;
+
+public interface RemoteControll {
+
+	
+}

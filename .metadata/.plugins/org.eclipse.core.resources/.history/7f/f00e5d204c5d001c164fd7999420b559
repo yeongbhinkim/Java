@@ -1,0 +1,21 @@
+package com.work.copy;
+
+public interface AccountIf2 {
+
+	void deposit(int anount);
+
+	int withdraw(int anount) throws Exception;
+
+	void removeAccount();// 폐지
+
+	void createAccount(); // 신규 등록
+
+	void withdraw();//출금
+
+	void deposit();//입금
+
+	void findAccount3(String ano); //빈계좌조회
+
+	void accountList2();//전체조회
+
+}

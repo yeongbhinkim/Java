@@ -1,0 +1,24 @@
+package main;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner(System.in);
+		일의 자리를 계속 더한다..
+		나머지값
+		while
+			count
+		
+				 
+
+
+		sc.close();
+	}
+}
+
+
+  

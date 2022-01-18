@@ -1,0 +1,31 @@
+package main;
+
+import java.util.Arrays;
+
+public class e {
+		public String S(String [] partcipant, String[] completion) {
+			Arrays.sort(partcipant);
+			Arrays.sort(completion);
+			
+			int i = 0;
+			for(i=0;i<completion.length;i++)
+				if(!partcipant[i].equals(completion[i]))
+					break;
+			
+		
+			
+			return partcipant[i];
+		}
+	
+	public static void main(String[] args) {
+		String[] part = {"leo", "kiki", "eden"};
+		String[] comp = {"leo", "kiki"};
+		e c =new e();
+		System.out.println(c.S(part,comp));
+		
+		
+		
+		
+	}
+
+}

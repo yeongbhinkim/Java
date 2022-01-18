@@ -1,0 +1,28 @@
+package main;
+
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		int A = 150;
+		int B = 266;
+		int C = 427;
+		
+		
+		 String str = Integer.toString(A*B*C);
+			int value = 0;
+		
+			
+			for(int i=0; i<10; i++) {
+				int count = 0; 
+		
+				if(str.charAt(i) == i) {
+					
+					count++;
+				}
+				System.out.println(c);
+			}
+	}
+
+}

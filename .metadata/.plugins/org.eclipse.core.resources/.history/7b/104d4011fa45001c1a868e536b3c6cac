@@ -1,0 +1,32 @@
+package com.kh;
+
+import java.util.Scanner;
+
+public class tast1 {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		boolean stop = false;//프로그램 정지
+		String[][] seats = new String [6][9];
+		int num = 0;
+		for(int i=0; i<seats.length; i++) {
+			for(int j=0; j<seats[i].length; j++) {
+				seats[i][j]=String.valueOf(num+1);
+				num++;
+				if(i==0) {
+					System.out.print(seats[i][j]+"  ");
+				}else {
+					System.out.print(seats[i][j]+" ");
+				}
+			}
+			System.out.println();
+		}
+		
+		while (run) {
+			System.out.println("좌석을 선택하세요");
+			System.out.println("선택>>");
+		}
+	}
+
+}

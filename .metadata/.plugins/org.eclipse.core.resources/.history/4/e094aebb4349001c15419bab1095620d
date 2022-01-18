@@ -1,0 +1,16 @@
+package test;
+
+public class testMain {
+
+	public static void main(String[] args) {
+		
+		method(new test1());
+		method(new test2());
+		
+	}
+
+	private static void method(test test1) {
+		test.test();
+	}
+
+}

@@ -1,0 +1,17 @@
+package first;
+
+public class Switch {
+
+	public static void main(String[] args) {
+		int number = (int)(Math.random()*6)+1;
+		
+		System.out.println("number = "+number);
+		
+		switch(number) {
+		case 1:
+			System.out.println("¼ıÀÚ = "+number);
+		}
+
+	}
+
+}

@@ -1,0 +1,246 @@
+package com.work;
+
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+public class AccountMain {
+	private static Account[] accountsArray = new Account[005];
+	private static Scanner scanner = new Scanner(System.in);
+	private static int seq = 0;
+	private static boolean isCreatd = false;
+
+	public static void main(String[] args) {
+
+		boolean run = true;
+//중복 5만원 이름수정
+		while (run) {
+			System.out.println("1.신규|2.폐지|3.예금|4.출금|5.계좌조회(개별)|6.계좌조회(전체)|7.종료");
+			System.out.print("선택> ");
+
+			int selectNo = scanner.nextInt();
+
+			switch (selectNo) {
+			case 1:// 신규
+				createAccount();
+				break;
+			case 2:// 폐지
+				removeAccount();
+				break;
+			case 3:// 입금
+				deposit();
+				break;
+			case 4:// 출금
+				withdraw();
+				break;
+			case 5:
+				accountList3();
+				break;
+			case 6:
+				accountList2();
+				break;
+			case 7:
+				run = false;
+				break;
+
+			}
+
+		}
+		System.out.println("프로그램 종료");
+	}// end of main()
+
+	private static void removeAccount() {
+	
+		System.out.println("해지할 계좌");
+		Account account;
+
+		String ano = scanner.next();
+		account = findAccount(ano);
+		if (account == null) {
+			System.out.println("계좌번호를 확인하세요");
+		} else {
+			for (int i = 0; i < accountsArray.length; i++) {
+				if (accountsArray[i] != null) {
+					accountsArray[i] = null;
+					System.out.println("계좌 해지");
+				}
+			}
+		}
+
+	}// end of createAccount()
+
+	private static void withdraw() {
+		if (!isRegistered()) {
+			System.out.println("먼저 계좌등록을 하세요");
+			return;
+		}
+		accountList();
+		System.out.println("출금할 계좌번호를 선택하세요>");
+		Account account;
+		while (true) {
+			String ano = scanner.next();
+			account = findAccount(ano);
+			if (account == null)
+				System.out.println("계좌번호를 확인하세요");
+			else
+				break;
+		}
+		System.out.println("출금할 금액을 입력하세요>");
+		int amount = scanner.nextInt();
+		int result;
+		try {
+			result = account.withdraw(amount);
+			System.out.println("출금액 :" + result);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+	}// end of withdraw()
+
+	private static void deposit() {
+		if (!isRegistered()) {
+			System.out.println("먼저 계좌등록을 하세요");
+			return;
+		}
+		accountList();
+		System.out.println("입금할 계좌번호를 선택하세요>");
+		Account account;
+		while (true) {
+			String ano = scanner.next();
+			account = findAccount(ano);
+			if (account == null)
+				System.out.println("계좌번호를 확인하세요>");
+			else
+				break;
+		}
+		System.out.println("입금할 금액을 입력하세요>");
+		int amount = scanner.nextInt();
+		if (amount > 20000) {
+			System.out.println("20000원 초과입니다.");
+		} else {
+			account.deposit(amount);
+			System.out.println("예금 성공");
+		}
+	}// end of deposit()
+
+//		accountList();
+//		System.out.println("예금자명");
+//		Account account;
+//		
+//		while (true) {
+//			String owner = scanner.next();
+//			account = findAccount(owner);
+//			if (account.equals(owner))
+//				System.out.println("중복입니다");
+//			else
+//				break;
+//		}
+//		accountList(); findAccount2	
+	
+//			if (accountList().equals(owner))
+//				System.out.println("중복입니다.");
+	
+	
+	//신규 등록
+	private static void createAccount() {
+		String ano = String.format(new DecimalFormat("000").format(++seq));
+		System.out.print("예금자명>");
+//		String owner = scanner.next();	
+		int amount = 0;
+		System.out.println("계좌번호를 선택하세요>");
+		Account account;
+	while (true) {
+			String ano = scanner.next();
+			account = findAccount(ano);
+			if (account == null)
+				System.out.println("계좌번호를 확인하세요>");
+			else
+				break;
+		}
+		
+		
+		for (int j = 0; j < accountsArray.length; j++) {
+			if (accountsArray[j] == null) {
+				accountsArray[j] = new Account(ano, owner, amount);
+				System.out.println("계좌 등록성공");
+				System.out.println("계좌번호 : " + ano);
+				System.out.println("잔액 : " + amount);
+				isCreatd = true;
+				break;
+			}
+			}
+		}		
+	}// end of createAccount()
+	private static Account findAccount2(String owner) {
+		Account account = null;
+		for (int i = 0; i < accountsArray.length; i++) {
+			if (accountsArray[i] != null)
+				if (accountsArray[i].getAno().equals(owner)) {
+					account = accountsArray[i];
+				}
+		}
+		return account;
+	}// end of findAccount2
+
+	private static boolean isRegistered() {
+		return isCreatd;
+	}// end of isRegistered()
+
+	private static Account findAccount(String ano) {
+		Account account = null;
+		for (int i = 0; i < accountsArray.length; i++) {
+			if (accountsArray[i] != null)
+				if (accountsArray[i].getAno().equals(ano)) {
+					account = accountsArray[i];
+				}
+		}
+		return account;
+	}// end of findAccount
+
+
+		private static void accountList3() {
+			if (!isRegistered()) {
+				System.out.println("먼저 계좌등록을 하세요");
+				return;
+			}
+			System.out.println("계좌번호를 선택하세요>");
+			Account account;
+		while (true) {
+				String ano = scanner.next();
+				account = findAccount(ano);
+				if (account == null)
+					System.out.println("계좌번호를 확인하세요>");
+				else
+					break;
+			}
+		System.out.println("계좌번호 : " + account.getAno() + ", 이름 : " + account.getOwner() + ", 잔액 : "
+		+ account.getBalance());
+			
+	
+		}
+	private static void accountList2() {
+		if (!isRegistered()) {
+			System.out.println("먼저 계좌등록을 하세요");
+			return;
+		}
+		for (int i = 0; i < accountsArray.length; i++) {
+			if (accountsArray[i] != null) {
+				System.out.println("계좌번호 : " + accountsArray[i].getAno() + ", 이름 : " + accountsArray[i].getOwner() + ", 잔액 : "
+						+ accountsArray[i].getBalance());
+			}
+		}
+		System.out.println("잔여수 : " + (accountsArray.length - seq));
+	}// accountList()
+	
+	private static void accountList() {
+		if (!isRegistered()) {
+			System.out.println("먼저 계좌등록을 하세요");
+			return;
+		}
+		for (int i = 0; i < accountsArray.length; i++) {
+			if (accountsArray[i] != null) {
+				System.out.println("계좌번호 : " + accountsArray[i].getAno() + ", 이름 : " + accountsArray[i].getOwner() + ", 잔액 : "
+						+ accountsArray[i].getBalance());
+			}
+		}
+	
+	}// account()
+}// end of class

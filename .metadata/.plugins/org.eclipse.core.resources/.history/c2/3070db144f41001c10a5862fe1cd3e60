@@ -1,0 +1,32 @@
+package first;
+
+public class Practice {
+	
+	public static void main(String[] args) {
+		char grade ='a';
+		
+		switch (grade) {
+		case 'A':
+		case 'a':
+			System.out.println("우수회원");
+			break;
+		case 'B':
+		case 'b':
+			System.out.println("일반회원");
+			switch (grade) {
+			case 'B':
+				System.out.println("대문자 B");
+				break;
+			case 'b':
+				System.out.println("소문자 B");
+				break;
+			}
+		default:
+			System.out.println("없음");
+			break;
+		}
+	}
+}
+		
+
+	

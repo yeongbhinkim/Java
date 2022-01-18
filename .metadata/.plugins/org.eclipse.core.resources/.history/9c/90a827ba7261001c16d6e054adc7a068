@@ -1,0 +1,24 @@
+package main;
+
+import java.util.Scanner;
+
+public class d {
+
+	public static void main(String[] args) {
+		Scanner sc =new Scanner(System.in);
+		int a=sc.nextInt();
+		int num = (int) (Math.random() * 100) + 1;
+		boolean run = true;
+		
+		while(run) {
+			if (num == a) {
+				
+				System.out.println("정답입니다 "+"회만에 맞췄어요");
+				run =true;
+			}
+			
+			break;
+		}
+	}
+
+}

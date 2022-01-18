@@ -1,0 +1,28 @@
+package first;
+
+public class Practice {
+	
+	public static void main(String[] args) {
+		char grade ='a';
+		
+		if(grade == 'B' || grade == 'b') {
+			System.out.println("일반회원");
+			if(grade == 'B') {
+				System.out.println("B");
+			} else {
+				System.out.println("b");
+			}
+		}else if (grade == 'A' || grade == 'a') {
+			System.out.println("우수회원");
+		}else if(grade == 'A'){
+			System.out.println("없음A");
+		}else if(grade == 'a') {
+			System.out.println("a");
+		}else {
+			System.out.println("없음");
+		}
+	}
+}
+		
+
+	

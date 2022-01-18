@@ -1,0 +1,18 @@
+package first;
+
+public class Practice {
+	
+	public static void main(String[] args) {
+		char grade ='a';
+		
+		switch (grade) {
+		case 'A':
+		case 'a';
+			System.out.println("우수회원");
+			break;
+		}
+	}
+}
+		
+
+	

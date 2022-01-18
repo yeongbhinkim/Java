@@ -1,0 +1,25 @@
+package com.kh;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int x = 10;
+		int y = 20;
+		
+		int sum = x + y;
+		System.out.println(sum);
+		
+		//조건문
+		//1)단순 if(조건식)
+		if(x > y) {
+			System.out.println("x는 y보다 크다");
+		}
+		
+		//2)if~ else~
+		
+		//3)if ~ else if ~ else
+		
+
+	}
+
+}

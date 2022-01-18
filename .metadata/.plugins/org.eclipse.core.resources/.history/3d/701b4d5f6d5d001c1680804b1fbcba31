@@ -1,0 +1,11 @@
+package com.work3;
+
+public interface AccountIf {
+
+	void deposit(int anount);
+
+	int withdraw(int anount);
+
+	
+
+}

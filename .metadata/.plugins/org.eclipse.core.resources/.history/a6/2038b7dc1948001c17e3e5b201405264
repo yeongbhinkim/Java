@@ -1,0 +1,11 @@
+package solution6;
+
+public class ShopService {
+
+		private static ShopService singleton = new ShopService();
+		
+		private ShopService() {}
+		static ShopService getInstaqnce() {
+		return singleton;
+		}
+}
