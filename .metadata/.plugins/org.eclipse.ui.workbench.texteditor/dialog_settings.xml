@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value=","/>
+		<item key="selection" value="Expression"/>
 		<list key="findhistory">
+			<item value="Expression"/>
 			<item value=","/>
 			<item value="이재영"/>
 			<item value="이"/>
@@ -22,7 +23,6 @@
 			<item value="findAccount"/>
 			<item value="&#x09;@Override"/>
 			<item value="createNewAccount"/>
-			<item value="isRegistered"/>
 		</list>
 		<list key="replacehistory">
 			<item value=""/>

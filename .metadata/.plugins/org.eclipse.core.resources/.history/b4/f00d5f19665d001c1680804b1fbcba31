@@ -1,9 +1,0 @@
-package com.work;
-
-public interface ¤¤¤±¤© {
-
-	int deposit(int anount) throws Exception;
-
-	int withdraw(int anount) throws Exception;
-
-}

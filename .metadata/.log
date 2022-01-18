@@ -13536,3 +13536,15 @@ java.util.concurrent.TimeoutException
 
 !ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-18 10:37:07.492
 !MESSAGE executing callback sts4.classpath.RwjgZxRY SUCCESS [done]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-18 12:47:08.471
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.RwjgZxRY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-18 12:47:08.471
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.RwjgZxRY
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-18 12:47:08.472
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-01-18 12:47:08.472
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.RwjgZxRY => OK

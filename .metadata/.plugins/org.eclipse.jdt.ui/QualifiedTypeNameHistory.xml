@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="com.kh.exam9.Person"/>
-    <fullyQualifiedTypeName name="com.kh.exam2.ThreadA"/>
-    <fullyQualifiedTypeName name="sec01.verify.exam02.MovieThread"/>
-    <fullyQualifiedTypeName name="sec01.verify.exam02.MusicRunnable"/>
-    <fullyQualifiedTypeName name="java.lang.Runnable"/>
-    <fullyQualifiedTypeName name="sec02.verify.exam3.MovieThread"/>
-    <fullyQualifiedTypeName name="java.lang.Thread"/>
-    <fullyQualifiedTypeName name="sec02.verify.exam3.MovieThread2"/>
-    <fullyQualifiedTypeName name="com.kh.exam3.Person"/>
     <fullyQualifiedTypeName name="problem.q1.City"/>
     <fullyQualifiedTypeName name="com.words.DicCustomerIF"/>
     <fullyQualifiedTypeName name="com.words.Menu"/>
@@ -50,7 +41,6 @@
     <fullyQualifiedTypeName name="java.util.Map"/>
     <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Iterable"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="javax.swing.text.html.HTMLDocument.Iterator"/>
@@ -60,4 +50,14 @@
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="com.kh.Person.Calculator"/>
+    <fullyQualifiedTypeName name="com.kh.Person"/>
+    <fullyQualifiedTypeName name="com.kh.Person.Calculator2"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.kh.button.Button"/>
+    <fullyQualifiedTypeName name="com.kh.button.Button.OnClickListener"/>
+    <fullyQualifiedTypeName name="com.kh.button2.Button"/>
+    <fullyQualifiedTypeName name="com.kh.FP.Cal"/>
+    <fullyQualifiedTypeName name="com.kh.FP.Cal.Expression"/>
 </qualifiedTypeNameHistroy>
